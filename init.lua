@@ -1,7 +1,7 @@
 --[[
 
 =====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
+rrr================= READ THIS BEFORE CONTINUING ====================
 =====================================================================
 ========                                    .-----.          ========
 ========         .----------------------.   | === |          ========
@@ -867,6 +867,8 @@ require('lazy').setup({
         typescript = { 'eslint_d' },
         javascript = { 'eslint_d' },
         vue = { 'eslint_d' },
+        html = { 'prettier' },
+        css = { 'prettier' },
         -- vue = { 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
@@ -877,8 +879,7 @@ require('lazy').setup({
 
       formatter = {
         eslint_d = {
-          command = 'npm eslint',
-          args = { '--fix', '--stdin', '--stdin-filename', '$FILENAME' },
+          command = 'witch eslint',
           stdin = true,
         },
       },
@@ -1104,7 +1105,7 @@ require('lazy').setup({
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
-  require 'custom.plugins.typescript_tools',
+  --  require 'custom.plugins.typescript_tools',
   require 'custom.plugins.alpha',
   require 'custom.plugins.auto-session',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
